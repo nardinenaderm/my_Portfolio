@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating Image</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: transparent; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // --- 3D Scene Setup ---
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        document.body.appendChild(renderer.domElement);
+
+        camera.position.z = 5;
+
+        // --- Load Image and Create Mesh ---
+        const textureLoader = new THREE.TextureLoader();
+        let imageMesh;
+
+        textureLoader.load(
+            'pictures/flpng.png', // Replace with your image file name
+            function(texture) {
+                // Adjust texture to handle transparency
+                texture.minFilter = THREE.LinearFilter;
+                texture.magFilter = THREE.LinearFilter;
+                texture.format = THREE.RGBAFormat;
+
+                const material = new THREE.MeshBasicMaterial({
+                    map: texture,
+                    transparent: true,
+                    side: THREE.DoubleSide
+                });
+                const geometry = new THREE.PlaneGeometry(2, 2); // Adjust size as needed
+                imageMesh = new THREE.Mesh(geometry, material);
+                scene.add(imageMesh);
+            },
+            undefined,
+            function(err) {
+                console.error('An error happened loading the image:', err);
+            }
+        );
+
+        // --- Animation Loop ---
+        function animate() {
+            requestAnimationFrame(animate);
+
+            if (imageMesh) {
+                // Make the image float
+                imageMesh.rotation.y += 0.005;
+                imageMesh.rotation.x += 0.005;
+                imageMesh.position.y = Math.sin(Date.now() * 0.001) * 0.5; // Up and down float
+            }
+            
+            renderer.render(scene, camera);
+        }
+        
+        // --- Responsiveness ---
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Start the animation
+        window.onload = function() {
+            animate();
+        };
+
+    </script>
+</body>
+</html>
