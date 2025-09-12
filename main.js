@@ -4,7 +4,6 @@
             const aboutMeSection = document.getElementById('about-me-section');
             const backgroundImage = document.getElementById('background-image');
             const secondImage = document.getElementById('second-image');
-            const portfolioSections = document.querySelectorAll('.portfolio-section');
             const toolButtons = document.querySelectorAll('.tool-button');
             
             // Set initial position
@@ -43,16 +42,6 @@
                 } else {
                     aboutMeSection.classList.remove('visible');
                 }
-
-                // Check if portfolio sections are in view
-                portfolioSections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    
-                    if (scrollY > sectionTop - window.innerHeight * 0.7) {
-                        section.classList.add('visible');
-                    }
-                });
 
                 // Update scroll text
                 if (scrollPercentage > 0.05) {

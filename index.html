@@ -10,9 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+    <nav class="text-nav">
+        <a href="#about-me-section" class="text-nav-item">About</a>
+        <a href="projects.html" class="text-nav-item">Projects</a>
+        <a href="resume.html" class="text-nav-item">Resume</a>
+    </nav>
     <div id="background-container">
         <div id="background-image"></div>
     </div>
@@ -22,9 +28,6 @@
         <h1>Nardine Nader Maurice</h1>
         <h2>CG Technical Director | Graphics Programmer</h2>
         <div class="social-links">
-            <a href="https://drive.google.com/file/d/110Uf3n6ZRphbd09IxEJeHq0xitlRwDLK/view?usp=drive_link" class="resume">
-                <img src="logos/resume.png" alt="resume">
-            </a>
             <a href="https://www.linkedin.com/in/nardinenader/" target="_blank" class="social-button">
                 <img src="logos/linkedin.png" alt="LinkedIn">
             </a>
@@ -56,7 +59,7 @@
         <div class="about-content">
             <h3>About Me</h3>
             <p>
-                My name is Nardine Nader, I graduated in 2024 with a dual degree in Computer Science from Ain Shams University and the University of East London, majoring in Multimedia and Computer Graphics. For my graduation project, I developed a Virtual Reality Chemistry Lab, combining interactive design with immersive technology.
+                Hello! My name is Nardine Nader, I graduated in 2024 with a dual degree in Computer Science from Ain Shams University and the University of East London, majoring in Multimedia and Computer Graphics. For my graduation project, I developed a Virtual Reality Chemistry Lab, combining interactive design with immersive technology.
             </p>
             <p>
                 After graduation, I joined the CG Technical Director Track at the Information Technology Institute (ITI), where I gained first-hand experience in a full movie production pipeline. During this time, I also created my first graphics engine using the Vulkan API, strengthening my technical foundation in computer graphics.
@@ -94,162 +97,7 @@
         </svg>
         <span id="scroll-text">Scroll to explore</span>
     </div>
-    
-    <!-- Portfolio Sections -->
-    <section id="unreal" class="portfolio-section">
-        <div class="section-content">
-            <h3>Unreal Engine Projects</h3>
-            <p>Here are some of my projects created with Unreal Engine, showcasing my skills in real-time rendering, blueprint scripting, and interactive environment design.</p>
-            
-            <div class="project-grid">
-                <div class="project-item">
-                    <div class="project-image">Unreal Project 1</div>
-                    <div class="project-info">
-                        <h4>Virtual Reality Chemistry Lab</h4>
-                        <p>My graduation project - an immersive VR experience for chemistry experiments.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Unreal Project 2</div>
-                    <div class="project-info">
-                        <h4>Real-Time Architectural Visualization</h4>
-                        <p>Interactive architectural walkthrough with dynamic lighting and materials.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Unreal Project 3</div>
-                    <div class="project-info">
-                        <h4>Game Prototype</h4>
-                        <p>A third-person adventure game with custom gameplay mechanics.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="maya" class="portfolio-section">
-        <div class="section-content">
-            <h3>Autodesk Maya Projects</h3>
-            <p>These projects demonstrate my 3D modeling, animation, and rigging skills using Autodesk Maya.</p>
-            
-            <div class="project-grid">
-                <div class="project-item">
-                    <div class="project-image">Maya Project 1</div>
-                    <div class="project-info">
-                        <h4>Character Modeling</h4>
-                        <p>High-resolution character model with detailed textures and realistic proportions.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Maya Project 2</div>
-                    <div class="project-info">
-                        <h4>Environment Design</h4>
-                        <p>Detailed environment scene with optimized geometry for real-time rendering.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Maya Project 3</div>
-                    <div class="project-info">
-                        <h4>Animation Reel</h4>
-                        <p>Character animations showcasing walk cycles, facial expressions, and action sequences.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="houdini" class="portfolio-section">
-        <div class="section-content">
-            <h3>Houdini Projects</h3>
-            <p>My work with Houdini includes procedural modeling, VFX, and dynamic simulations.</p>
-            
-            <div class="project-grid">
-                <div class="project-item">
-                    <div class="project-image">Houdini Project 1</div>
-                    <div class="project-info">
-                        <h4>Procedural City Generation</h4>
-                        <p>Procedurally generated cityscape with customizable parameters for building variety.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Houdini Project 2</div>
-                    <div class="project-info">
-                        <h4>Fluid Simulation</h4>
-                        <p>Realistic fluid simulation for a cinematic water effect sequence.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Houdini Project 3</div>
-                    <div class="project-info">
-                        <h4>Destruction Effect</h4>
-                        <p>Procedural building destruction with realistic debris and particle effects.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="vulkan" class="portfolio-section">
-        <div class="section-content">
-            <h3>Vulkan API Projects</h3>
-            <p>These projects showcase my low-level graphics programming skills using the Vulkan API.</p>
-            
-            <div class="project-grid">
-                <div class="project-item">
-                    <div class="project-image">Vulkan Project 1</div>
-                    <div class="project-info">
-                        <h4>Custom Graphics Engine</h4>
-                        <p>A from-scratch graphics engine implementing PBR rendering and deferred shading.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Vulkan Project 2</div>
-                    <div class="project-info">
-                        <h4>Real-Time Ray Tracing</h4>
-                        <p>Implementation of real-time ray tracing effects using Vulkan ray tracing extensions.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Vulkan Project 3</div>
-                    <div class="project-info">
-                        <h4>Compute Shader Effects</h4>
-                        <p>GPU-accelerated particle system and post-processing effects using compute shaders.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="unity" class="portfolio-section">
-        <div class="section-content">
-            <h3>Unity Projects</h3>
-            <p>My Unity projects demonstrate skills in interactive application development, AR/VR, and game design.</p>
-            
-            <div class="project-grid">
-                <div class="project-item">
-                    <div class="project-image">Unity Project 1</div>
-                    <div class="project-info">
-                        <h4>Augmented Reality Application</h4>
-                        <p>AR app for visualizing 3D models in real-world environments using AR Foundation.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Unity Project 2</div>
-                    <div class="project-info">
-                        <h4>Mobile Game</h4>
-                        <p>Optimized mobile game with touch controls and adaptive performance settings.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">Unity Project 3</div>
-                    <div class="project-info">
-                        <h4>Interactive Visualization</h4>
-                        <p>Data visualization tool with interactive 3D charts and real-time data input.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-        <script src="script.js"></script>
+        <script src="main.js"></script>
 </body>
 </html>

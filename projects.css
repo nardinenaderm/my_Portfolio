@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #1a1a2e;
+    color: white;
+    position: relative;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+/* Minimal Text Navigation */
+.text-nav {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    z-index: 1000;
+}
+
+.text-nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-nav-item:hover {
+    transform: translateY(-2px);
+    color: #ff4d8d;
+}
+
+.text-nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #ff4d8d;
+    transition: all 0.3s ease;
+}
+
+.text-nav-item:hover::after {
+    width: 100%;
+}
+
+/* Projects Container */
+.projects-container {
+    padding: 100px 40px 60px;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.projects-title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #ff4d8d;
+}
+
+.projects-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #e2e2e2;
+    opacity: 0.8;
+}
+
+/* Software Buttons Grid */
+.software-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.software-button {
+    position: relative;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.software-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.button-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.software-button:hover .button-content {
+    transform: translateY(-10px);
+}
+
+.software-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+.software-button h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.software-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.software-button:hover .software-video {
+    opacity: 0.2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .software-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .text-nav {
+        top: 20px;
+        right: 20px;
+        gap: 15px;
+    }
+    
+    .text-nav-item {
+        font-size: 0.9rem;
+    }
+    
+    .projects-container {
+        padding: 80px 20px 40px;
+    }
+    
+    .projects-title {
+        font-size: 3rem;
+    }
+    
+    .software-buttons {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .software-button {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-nav {
+        flex-direction: row;
+        gap: 12px;
+        top: 15px;
+        right: 50%;
+        transform: translateX(50%);
+        background: rgba(26, 26, 46, 0.7);
+        padding: 8px 15px;
+        border-radius: 30px;
+        backdrop-filter: blur(5px);
+    }
+    
+    .text-nav-item {
+        font-size: 0.8rem;
+    }
+    
+    .projects-title {
+        font-size: 2.5rem;
+    }
+    
+    .projects-subtitle {
+        font-size: 1rem;
+    }
+    
+    .software-button {
+        height: 200px;
+    }
+    
+    .software-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .software-button h3 {
+        font-size: 1.2rem;
+    }
+}
