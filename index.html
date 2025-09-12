@@ -8,22 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div id="background-container">
+    <div id="background-container">
         <div id="background-image"></div>
     </div>
 
-    </div>
     <div id="second-image"></div>
     <div id="overlay">
         <h1>Nardine Nader Maurice</h1>
         <h2>CG Technical Director | Graphics Programmer</h2>
         <div class="social-links">
+            <a href="https://drive.google.com/file/d/110Uf3n6ZRphbd09IxEJeHq0xitlRwDLK/view?usp=drive_link" class="resume">
+                <img src="logos/resume.png" alt="resume">
+            </a>
             <a href="https://www.linkedin.com/in/nardinenader/" target="_blank" class="social-button">
                 <img src="logos/linkedin.png" alt="LinkedIn">
             </a>
@@ -33,16 +34,25 @@
             <a href="mailto:nardinenaderm@gmail.com" class="social-button">
                 <img src="logos/Gmail.png" alt="Email">
             </a>
-                <a href="tel:01025114700" class="social-button">
+            <a href="tel:01025114700" class="social-button">
                 <img src="logos/telephone.png" alt="Phone">
-                </a>
+            </a>
         </div>
     </div>
 
     <section id="about-me-section">
-        <div id="flower-top" class="floating-flower"></div>
-        <div id="flower-bottom" class="floating-flower"></div>
+        <!-- Flower containers -->
+        <div id="flower-container-top">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+            </div>
         </div>
+        <div id="flower-container-bottom">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+        
         <div class="about-content">
             <h3>About Me</h3>
             <p>
@@ -55,7 +65,7 @@
                 I am proficient in Houdini, Autodesk Maya, Unreal Engine, and Unity, with additional knowledge of Nuke. My work bridges both the technical and the artistic sides of production—I have developed custom tools, scripts, and pipeline solutions, as well as created artistic content within these platforms.
             </p>
 
-             <div class="tool-buttons">
+            <div class="tool-buttons">
                 <button class="tool-button" data-section="vulkan">
                     <img src="logos/vulkan.png" alt="Vulkan">
                 </button>
@@ -77,12 +87,14 @@
             </div>
         </div>
     </section>
+    
     <div class="scroll-indicator" id="scroll-indicator">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span id="scroll-text">Scroll to explore</span>
     </div>
+    
     <!-- Portfolio Sections -->
     <section id="unreal" class="portfolio-section">
         <div class="section-content">
@@ -238,13 +250,6 @@
             </div>
         </div>
     </section>
-    
-    <div class="scroll-indicator" id="scroll-indicator">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span id="scroll-text">Scroll to explore</span>
-    </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
