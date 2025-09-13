@@ -135,6 +135,9 @@ body::after {
     transition: all 0.4s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    display: block; /* Important for anchor tags */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
 }
 
 .software-button:hover {
@@ -142,6 +145,8 @@ body::after {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     z-index: 2;
     border-color: rgba(255, 77, 141, 0.3);
+    text-decoration: none; /* Ensure no underline on hover */
+    color: inherit; /* Maintain text color on hover */
 }
 
 /* Background image that fills the button */
@@ -198,26 +203,34 @@ body::after {
     align-items: center;
     justify-content: center;
     z-index: 3;
-    background: rgba(26, 26, 46, 0.5);
-    transition: all 0.4s ease;
+    background: rgb(248, 31, 183, 0.3);
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+    opacity: 0;
+
 }
 
 .software-button:hover .button-content {
-    background: rgba(26, 26, 46, 0.4);
+    background: rgba(26, 26, 46, 0.5); /* Visible background on hover */
+    opacity: 1; /* Fully visible on hover */
+    transform: translateY(0);
+
 }
 
 .software-button:hover h3 {
-    transform: scale(1.1); /* Slight scale effect on hover */
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .software-button h3 {
     font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 600;
-    color: rgba(255, 77, 141, 0.85);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    color: #ff4d8d;
     padding: 10px 20px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease 0.1s;
+    transform: scale(0.9); /* Start position offscreen */
+    opacity: 0; /* Hidden by default */
 }
 
 /* Video container */

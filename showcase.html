@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nardine Nader Maurice - Projects Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="showcase.css">
+    <link rel="stylesheet" href="maya.css">
+</head>
+<body>
+
+    <nav class="text-nav">
+        <a href="index.html" class="text-nav-item">About</a>
+        <a href="projects.html" class="text-nav-item">Projects</a>
+        <a href="resume.html" class="text-nav-item">Resume</a>
+    </nav>
+
+    <!-- Vertical Navigation -->
+    <nav class="vertical-nav">
+        <div class="nav-indicator"></div>
+        <a href="#maya" class="nav-item" data-section="maya">
+            <img src="logos/maya.png" alt="Maya">
+        </a>
+        <a href="#unreal" class="nav-item" data-section="unreal">
+            <img src="logos/ue.png" alt="Unreal Engine">
+        </a>
+        <a href="#vulkan" class="nav-item" data-section="vulkan">
+            <img src="logos/vulkan.png" alt="Vulkan">
+        </a>
+        <a href="#unity" class="nav-item" data-section="unity">
+            <img src="logos/unity.png" alt="Unity">
+        </a>
+        <a href="#houdini" class="nav-item" data-section="houdini">
+            <img src="logos/houdini.png" alt="Houdini">
+        </a>
+        <a href="#python" class="nav-item" data-section="python">
+            <img src="logos/python.png" alt="Python">
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="showcase-container">
+        <!-- Maya Section -->
+        <!-- Maya Section -->
+        <section id="maya" class="showcase-section">
+            <div class="section-header">
+                <h2>Autodesk Maya Projects</h2>
+                <p>Tools, 3D modeling, rigging, and animation</p>
+            </div>
+            
+            <!-- SYNC Project Subsection -->
+            <div class="sync-project">
+                <div class="sync-header">
+                    <h3>SYNC</h3>
+                    <p>A Maya AI-based tool for auto-keyframing animation </p>
+                </div>
+                
+                <div class="sync-content">
+                    <div class="sync-video-container">
+                        <!-- Replace with your actual video file -->
+                        <video class="sync-video" poster="videos/projects/maya/thumbnails/sync_thumbnail.png" controls>
+                            <source src="videos/projects/maya/sync.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                        <div class="video-placeholder" style="display: none;">
+                        <div class="play-icon">▶</div>
+                        <p>SYNC Project Video Demo</p>
+                        <div class="video-controls">
+                            <button class="video-btn" onclick="playVideo()">
+                                <span>Play Demo</span>
+                            </button>
+                            <a href="videos/sync-demo.mp4" download class="video-btn">
+                                <span>Download Video</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="sync-description">
+                        <p>SYNC is AI-based Maya tool that links audio-driven data to character rigs. 
+                            The system interprets analysis results from audio and maps them onto blendshape attributes of a rigged character. 
+                            This automates lip-sync and facial animation, minimizing manual keyframing while keeping attribute mapping flexible.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Original Maya Projects (Cards) -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">Maya Project 1</div>
+                    <div class="project-info">
+                        <h3>Character Modeling</h3>
+                        <p>High-resolution character model with detailed textures and realistic proportions.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Maya Project 2</div>
+                    <div class="project-info">
+                        <h3>Environment Design</h3>
+                        <p>Detailed environment scene with optimized geometry for real-time rendering.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Maya Project 3</div>
+                    <div class="project-info">
+                        <h3>Animation Reel</h3>
+                        <p>Character animations showcasing walk cycles, facial expressions, and action sequences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unreal Engine Section -->
+        <section id="unreal" class="showcase-section">
+            <div class="section-header">
+                <h2>Unreal Engine Projects</h2>
+                <p>Real-time rendering, blueprint scripting, and interactive environment design</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">Unreal Project 1</div>
+                    <div class="project-info">
+                        <h3>Virtual Reality Chemistry Lab</h3>
+                        <p>My graduation project - an immersive VR experience for chemistry experiments.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Unreal Project 2</div>
+                    <div class="project-info">
+                        <h3>Real-Time Architectural Visualization</h3>
+                        <p>Interactive architectural walkthrough with dynamic lighting and materials.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Unreal Project 3</div>
+                    <div class="project-info">
+                        <h3>Game Prototype</h3>
+                        <p>A third-person adventure game with custom gameplay mechanics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vulkan Section -->
+        <section id="vulkan" class="showcase-section">
+            <div class="section-header">
+                <h2>Vulkan API Projects</h2>
+                <p>Low-level graphics programming using the Vulkan API</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">Vulkan Project 1</div>
+                    <div class="project-info">
+                        <h3>Custom Graphics Engine</h3>
+                        <p>A from-scratch graphics engine implementing PBR rendering and deferred shading.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Vulkan Project 2</div>
+                    <div class="project-info">
+                        <h3>Real-Time Ray Tracing</h3>
+                        <p>Implementation of real-time ray tracing effects using Vulkan ray tracing extensions.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Vulkan Project 3</div>
+                    <div class="project-info">
+                        <h3>Compute Shader Effects</h3>
+                        <p>GPU-accelerated particle system and post-processing effects using compute shaders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unity Section -->
+        <section id="unity" class="showcase-section">
+            <div class="section-header">
+                <h2>Unity Projects</h2>
+                <p>Interactive application development, AR/VR, and game design</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">Unity Project 1</div>
+                    <div class="project-info">
+                        <h3>Augmented Reality Application</h3>
+                        <p>AR app for visualizing 3D models in real-world environments using AR Foundation.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Unity Project 2</div>
+                    <div class="project-info">
+                        <h3>Mobile Game</h3>
+                        <p>Optimized mobile game with touch controls and adaptive performance settings.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Unity Project 3</div>
+                    <div class="project-info">
+                        <h3>Interactive Visualization</h3>
+                        <p>Data visualization tool with interactive 3D charts and real-time data input.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Houdini Section -->
+        <section id="houdini" class="showcase-section">
+            <div class="section-header">
+                <h2>Houdini Projects</h2>
+                <p>Procedural modeling, VFX, and dynamic simulations</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">Houdini Project 1</div>
+                    <div class="project-info">
+                        <h3>Procedural City Generation</h3>
+                        <p>Procedurally generated cityscape with customizable parameters for building variety.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Houdini Project 2</div>
+                    <div class="project-info">
+                        <h3>Fluid Simulation</h3>
+                        <p>Realistic fluid simulation for a cinematic water effect sequence.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Houdini Project 3</div>
+                    <div class="project-info">
+                        <h3>Destruction Effect</h3>
+                        <p>Procedural building destruction with realistic debris and particle effects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Python Section -->
+        <section id="python" class="showcase-section">
+            <div class="section-header">
+                <h2>Python Projects</h2>
+                <p>Scripting, automation, and tools development</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">Python Project 1</div>
+                    <div class="project-info">
+                        <h3>Pipeline Tools</h3>
+                        <p>Custom tools and scripts for automating 3D production pipelines.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Python Project 2</div>
+                    <div class="project-info">
+                        <h3>Data Processing</h3>
+                        <p>Data analysis and visualization tools for processing complex datasets.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Python Project 3</div>
+                    <div class="project-info">
+                        <h3>API Integration</h3>
+                        <p>Integration of various software APIs for cross-platform workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="showcase.js"></script>
+</body>
+</html>
