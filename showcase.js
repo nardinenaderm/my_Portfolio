@@ -11,3 +11,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }
 )
+
+
+// Add this to your existing showcase.js if needed
+function playAutoRigVideo() {
+    const video = document.querySelector('.autorig-video');
+    const placeholder = document.querySelector('.autorig-video-container .video-placeholder');
+    
+    if (video) {
+        placeholder.style.display = 'none';
+        video.style.display = 'block';
+        video.play();
+    }
+}
+
+function playSyncVideo() {
+    const video = document.querySelector('.sync-video');
+    const placeholder = document.querySelector('.sync-video-container .video-placeholder');
+    
+    if (video) {
+        placeholder.style.display = 'none';
+        video.style.display = 'block';
+        video.play();
+    }
+}

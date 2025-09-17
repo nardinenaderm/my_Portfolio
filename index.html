@@ -8,15 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-        <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
     <nav class="text-nav">
         <a href="#about-me-section" class="text-nav-item">About</a>
-        <a href="projects.html" class="text-nav-item">Projects</a>
+        <a href="showcase.html" class="text-nav-item">Projects</a>
         <a href="resume.html" class="text-nav-item">Resume</a>
     </nav>
     <div id="background-container">
@@ -42,62 +43,104 @@
             </a>
         </div>
     </div>
-
-    <section id="about-me-section">
-        <!-- Flower containers -->
-        <div id="flower-container-top">
-            <div class="loading">
-                <div class="loading-spinner"></div>
-            </div>
-        </div>
-        <div id="flower-container-bottom">
-            <div class="loading">
-                <div class="loading-spinner"></div>
-            </div>
-        </div>
-        
-        <div class="about-content">
-            <h3>About Me</h3>
-            <p>
-                Hello! My name is Nardine Nader, I graduated in 2024 with a dual degree in Computer Science from Ain Shams University and the University of East London, majoring in Multimedia and Computer Graphics. For my graduation project, I developed a Virtual Reality Chemistry Lab, combining interactive design with immersive technology.
-            </p>
-            <p>
-                After graduation, I joined the CG Technical Director Track at the Information Technology Institute (ITI), where I gained first-hand experience in a full movie production pipeline. During this time, I also created my first graphics engine using the Vulkan API, strengthening my technical foundation in computer graphics.
-            </p>
-            <p>
-                I am proficient in Houdini, Autodesk Maya, Unreal Engine, and Unity, with additional knowledge of Nuke. My work bridges both the technical and the artistic sides of production—I have developed custom tools, scripts, and pipeline solutions, as well as created artistic content within these platforms.
-            </p>
-
-            <div class="tool-buttons">
-                <button class="tool-button" data-section="vulkan">
-                    <img src="logos/vulkan.png" alt="Vulkan">
-                </button>
-                <button class="tool-button" data-section="unreal">
-                    <img src="logos/ue.png" alt="Unreal Engine">
-                </button>
-                <button class="tool-button" data-section="maya">
-                    <img src="logos/maya.png" alt="Autodesk Maya">
-                </button>
-                <button class="tool-button" data-section="houdini">
-                    <img src="logos/houdini.png" alt="Houdini">
-                </button>
-                <button class="tool-button" data-section="unity">
-                    <img src="logos/unity.png" alt="Unity">
-                </button>
-                <button class="tool-button" data-section="python">
-                    <img src="logos/python.png" alt="python">
-                </button>
-            </div>
-        </div>
-    </section>
     
     <div class="scroll-indicator" id="scroll-indicator">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span id="scroll-text">Scroll to explore</span>
     </div>
 
-        <script src="main.js"></script>
+    <div class="content-wrapper">
+        <section id="about-me-section">
+            <div class="about-content">
+                <h3>About Me</h3>
+                <p>
+                    Hello! My name is Nardine Nader, I graduated in 2024 with a dual degree in Computer Science from Ain Shams University and the University of East London, majoring in Multimedia and Computer Graphics. For my graduation project, I developed a Virtual Reality Chemistry Lab, combining interactive design with immersive technology.
+                </p>
+                <p>
+                    After graduation, I joined the CG Technical Director Track at the Information Technology Institute (ITI), where I gained first-hand experience in a full movie production pipeline. During this time, I also created my first graphics engine using the Vulkan API, strengthening my technical foundation in computer graphics.
+                </p>
+                <p>
+                    I am proficient in Houdini, Autodesk Maya, Unreal Engine, and Unity, with additional knowledge of Nuke. My work bridges both the technical and the artistic sides of production—I have developed custom tools, scripts, and pipeline solutions, as well as created artistic content within these platforms.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects-section" class="projects-container">
+            <div class="software-buttons">
+                <a href="showcase.html#maya" class="software-button" data-software="maya">
+                    <img src="logos/p_maya.png" alt="Autodesk Maya" class="software-logo">
+                    <div class="button-content">
+                        <h3>Autodesk Maya</h3>
+                    </div>
+                    <div class="video-container">
+                        <video class="software-video" loop muted preload="auto">
+                            <source src="videos/demo/maya.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+                
+                <a href="showcase.html#unreal" class="software-button" data-software="unreal">
+                    <img src="logos/p_ue.png" alt="Unreal Engine" class="software-logo">
+                    <div class="button-content">
+                        <h3>Unreal Engine</h3>
+                    </div>
+                    <div class="video-container">
+                        <video class="software-video" loop muted preload="auto">
+                            <source src="videos/demo/ue.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+                
+                <a href="showcase.html#vulkan" class="software-button" data-software="vulkan">
+                    <img src="logos/p_vulkan.png" alt="Vulkan" class="software-logo">
+                    <div class="button-content">
+                        <h3>Vulkan API</h3>
+                    </div>
+                    <div class="video-container">
+                        <video class="software-video" loop muted preload="auto">
+                            <source src="videos/demo/vulkan.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+                
+                <a href="showcase.html#unity" class="software-button" data-software="unity">
+                    <img src="logos/p_unity.png" alt="Unity" class="software-logo">
+                    <div class="button-content">
+                        <h3>Unity</h3>
+                    </div>
+                    <div class="video-container">
+                        <video class="software-video" loop muted preload="auto">
+                            <source src="videos/demo/unity.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+                
+                <a href="showcase.html#houdini" class="software-button" data-software="houdini">
+                    <img src="logos/p_houdini.png" alt="Houdini" class="software-logo">
+                    <div class="button-content">
+                        <h3>Houdini</h3>
+                    </div>
+                    <div class="video-container">
+                        <video class="software-video" loop muted preload="auto">
+                            <source src="videos/demo/houdini.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+                
+                <a href="showcase.html#python" class="software-button" data-software="python">
+                    <img src="logos/p_python.png" alt="Python" class="software-logo">
+                    <div class="button-content">
+                        <h3>Python Tools</h3>
+                    </div>
+                    <div class="video-container">
+                        <video class="software-video" loop muted preload="auto">
+                            <source src="videos/demo/python.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+            </div>
+        </section>
+        </div> <script src="main.js"></script>
 </body>
 </html>

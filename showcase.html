@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="showcase.css">
     <link rel="stylesheet" href="maya.css">
+    <link rel="stylesheet" href="unreal.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
 
@@ -46,7 +50,6 @@
     <!-- Main Content -->
     <main class="showcase-container">
         <!-- Maya Section -->
-        <!-- Maya Section -->
         <section id="maya" class="showcase-section">
             <div class="section-header">
                 <h2>Autodesk Maya Projects</h2>
@@ -61,7 +64,8 @@
                 </div>
                 
                 <div class="sync-content">
-                    <div class="sync-video-container">
+                     <div class="video-description-wrapper"> 
+                      <div class="sync-video-container">
                         <!-- Replace with your actual video file -->
                         <video class="sync-video" poster="videos/projects/maya/thumbnails/sync_thumbnail.png" controls>
                             <source src="videos/projects/maya/sync.mp4" type="video/mp4">
@@ -76,10 +80,8 @@
                             <button class="video-btn" onclick="playVideo()">
                                 <span>Play Demo</span>
                             </button>
-                            <a href="videos/sync-demo.mp4" download class="video-btn">
-                                <span>Download Video</span>
-                            </a>
                         </div>
+                          </div>
                     </div>
                     
                     <div class="sync-description">
@@ -89,6 +91,98 @@
                     </div>
                 </div>
             </div>
+
+            <!-- AutoRig Project Subsection -->
+<div class="autorig-project">
+    <div class="autorig-header">
+        <h3>AutoRig</h3>
+        <p>A Maya tool for automatic character rigging and skeleton setup</p>
+    </div>
+    
+    <div class="autorig-content">
+        <div class="video-description-wrapper"> 
+            <div class="autorig-video-container">
+                <!-- Replace with your actual video file -->
+                <video class="autorig-video" poster="videos/projects/maya/thumbnails/autorig_thumbnail.png" controls>
+                    <source src="videos/projects/maya/autorig.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-placeholder" style="display: none;">
+                <div class="play-icon">▶</div>
+                <p>AutoRig Project Video Demo</p>
+                <div class="video-controls">
+                    <button class="video-btn" onclick="playVideo()">
+                        <span>Play Demo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="autorig-description">
+            <p>AutoRig is a Maya tool that automates the character rigging process. 
+                It analyzes mesh topology to create optimized joint placement, 
+                generates control rigs with intuitive interfaces, and sets up 
+                IK/FK switching systems. The tool significantly reduces rigging 
+                time while maintaining flexibility for animators.</p>
+        </div>
+    </div>
+</div>
+
+
+<section class="model-viewer-section">
+    <div class="model-viewer-header">
+        <h3>3D Model Showcase</h3>
+        <p>Explore my 3D models created with Autodesk Maya. Click on the thumbnails below to view different models.</p>
+    </div>
+    
+    <div class="model-viewer-container">
+        <canvas id="modelCanvas"></canvas>
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <div id="loadingText" class="loading-text">Loading model...</div>
+        </div>
+    </div>
+    
+    <div class="model-controls">
+        <button id="prevModel" class="control-btn">◀ Previous</button>
+        <button id="rotateToggle" class="control-btn" data-active="false">▶ Auto Rotate</button>
+        <button id="resetView" class="control-btn">⟳ Reset View</button>
+        <button id="nextModel" class="control-btn">Next ▶</button>
+    </div>
+    
+    <div class="model-info-panel">
+        <h4 id="modelName">Model Name</h4>
+        <p id="modelDescription">Model description will appear here.</p>
+        <div id="modelTags" class="model-tags">
+            <span class="model-tag">Maya</span>
+            <span class="model-tag">Rigging</span>
+        </div>
+    </div>
+    
+    <div class="model-list">
+        <!-- Thumbnails will be populated by JavaScript -->
+        <div class="model-thumbnail">
+            <img src="models/thumbnails/character_rig.jpg" alt="Character Rig">
+        </div>
+        <div class="model-thumbnail">
+            <img src="models/thumbnails/robot_rig.jpg" alt="Mechanical Robot">
+        </div>
+        <div class="model-thumbnail">
+            <img src="models/thumbnails/creature_rig.jpg" alt="Creature Rig">
+        </div>
+        <div class="model-thumbnail">
+            <img src="models/thumbnails/facial_rig.jpg" alt="Facial Rig">
+        </div>
+        <div class="model-thumbnail">
+            <img src="models/thumbnails/vehicle_rig.jpg" alt="Vehicle Rig">
+        </div>
+        <div class="model-thumbnail">
+            <img src="models/thumbnails/prop_rig.jpg" alt="Prop Rig">
+        </div>
+    </div>
+</section>
             
             <!-- Original Maya Projects (Cards) -->
             <div class="projects-grid">
@@ -120,30 +214,71 @@
         <section id="unreal" class="showcase-section">
             <div class="section-header">
                 <h2>Unreal Engine Projects</h2>
-                <p>Real-time rendering, blueprint scripting, and interactive environment design</p>
+                <p>Enviorment Art</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">Unreal Project 1</div>
-                    <div class="project-info">
-                        <h3>Virtual Reality Chemistry Lab</h3>
-                        <p>My graduation project - an immersive VR experience for chemistry experiments.</p>
+             <div class="arabesque-project">
+                <div class="arabesque-header">
+                    <h3>Arabesque</h3>
+                    <p>An Enviroment Created in Unreal Engine inspired by the arabian architetucure </p>
+                </div>
+                
+                <div class="arabesque-content">
+                     <div class="video-description-wrapper"> 
+                      <div class="arabesque-video-container">
+                        <!-- Replace with your actual video file -->
+                        <video class="arabesque-video" poster="videos/projects/unreal/ara_thumbnail.png" controls>
+                            <source src="videos/projects/unreal/arabesque.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                        <div class="video-placeholder" style="display: none;">
+                        <div class="play-icon">▶</div>
+                        <p>arabesque Project Video Demo</p>
+                        <div class="video-controls">
+                            <button class="video-btn" onclick="playVideo()">
+                                <span>Play Demo</span>
+                            </button>
+                        </div>
+                          </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">Unreal Project 2</div>
-                    <div class="project-info">
-                        <h3>Real-Time Architectural Visualization</h3>
-                        <p>Interactive architectural walkthrough with dynamic lighting and materials.</p>
+            </div>
+
+
+
+             <div class="static-project">
+                <div class="static-header">
+                    <h3>TV static</h3>
+                    <p>An Enviroment Created in Unreal Engine inspired by the arabian architetucure </p>
+                </div>
+                
+                <div class="static-content">
+                     <div class="video-description-wrapper"> 
+                      <div class="static-video-container">
+                        <!-- Replace with your actual video file -->
+                        <video class="static-video" poster="videos/projects/unreal/static.png" controls>
+                            <source src="videos/projects/unreal/static.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                        <div class="video-placeholder" style="display: none;">
+                        <div class="play-icon">▶</div>
+                        <p>arabesque Project Video Demo</p>
+                        <div class="video-controls">
+                            <button class="video-btn" onclick="playVideo()">
+                                <span>Play Demo</span>
+                            </button>
+                        </div>
+                          </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">Unreal Project 3</div>
-                    <div class="project-info">
-                        <h3>Game Prototype</h3>
-                        <p>A third-person adventure game with custom gameplay mechanics.</p>
-                    </div>
-                </div>
+            </div>
+
+
+
+            
             </div>
         </section>
 
@@ -273,5 +408,6 @@
     </main>
 
     <script src="showcase.js"></script>
+    <script type="module" src="model-viewer.js"></script>
 </body>
 </html>

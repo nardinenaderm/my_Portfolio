@@ -217,3 +217,58 @@ function loadFlowerModel(containerId, modelUrl, rotationAdjustment = { x: 0, y: 
 }
 
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const scrollIndicator = document.getElementById('scroll-indicator');
+    const backgroundImage = document.getElementById('background-image');
+    const secondImage = document.getElementById('second-image');
+    
+    // Handle scroll events for parallax background
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+
+        // Move background image upward as you scroll down
+        const backgroundOffset = -scrollY * 0.3;
+        backgroundImage.style.transform = `translateY(${backgroundOffset}px)`;
+
+        // Move second image to the right as you scroll down
+        const imageOffset = scrollY * 1.5;
+        secondImage.style.transform = `translateY(-50%) translateX(${imageOffset}px)`;
+
+        // Hide scroll indicator after scrolling a bit
+        if (scrollY > 100) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.pointerEvents = 'none';
+        } else {
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.pointerEvents = 'auto';
+        }
+    });
+
+    // --- MERGED SCRIPT FROM projects.js ---
+    const softwareButtons = document.querySelectorAll('.software-button');
+    
+    softwareButtons.forEach(button => {
+        const video = button.querySelector('.software-video');
+        
+        if (video) {
+            button.addEventListener('mouseenter', function() {
+                // ✅ ADD THIS LINE
+                video.muted = true; 
+                
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        // This catch block will prevent console errors if something still goes wrong.
+                        // console.error("Video play failed:", error);
+                    });
+                }
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                video.pause();
+                video.currentTime = 0;
+            });
+        }
+    });
+});
